@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+body {
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.grid{
+    /*height: 100vh;*/
+    display: grid;
+    /* Pode-se usar em PX ou Porcentagem
+    grid-template-columns: 200px 200px 200px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*Pode-se usar 200px (valor fixo) e 40% 40%;*/
+    /*Pode-se usar o: repeat(3, 33%) Ele vai repetir 3 colunas com 33%*/
+    /*Pode-se usar fração para ficar bem dívidido. Ex: 1fr 1fr 1fr (vai dívidir 3 colunas por igual). Pode se usar porcentagem com fração: 20% 1fr 1fr.
+    Pode-se usar auto (automatico): 20% 20% auto ou 20% 20% auto auto.*/
+    /*grid-template-rows: repeat(4, 1fr);*/
+    /*grid-template-rows: 1fr 2fr 4fr 1fr;*/
+    /*grid-template-rows: 30% 100px 4fr 1fr;*/
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.item2 {
+    grid-column: span 2;
+}
+
+.item3 {
+    grid-column: span 2;
+}
+
+.item4 {
+    grid-row: span 2;
+}
+
+.item7 {
+    grid-column: span 3;
+}
+
+/*.item1 {*/
+    /*grid-column-start: 1;
+    grid-column-end: 3;*/
+    /*Existe uma maneira mais simplificada de exibir o código acima: grid-column: 1 /3*/
+    /*grid-column: 1 / span 2;
+    grid-row: 1 / span 2;*/
+/*}*/
+
+.grid>div {
+    border: 3px solid yellowgreen;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <!--<div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>-->
+    </div>
+    
+</body>
+</html>

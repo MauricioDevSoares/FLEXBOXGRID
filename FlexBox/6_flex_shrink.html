@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+        .container-flex {
+            /*width: 250px;*/
+            height: 200px;
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+
+        .container-flex > div {
+            font-size: 2rem;
+            border: 4px solid white;
+            color: white;
+            padding: 4px;
+            margin: 4px;
+            flex-basis:  200px;
+        }
+
+        .coluna {
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .item2, .item3 {
+            flex-shrink: 1;
+        }
+
+         .item1 {
+            flex-shrink: 2;
+         }
+
+    
+    </style>
+</head>
+<body>
+
+    <h1>Flex Shrink</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div class="item1">Item 01</div>
+        <div class="item2">Item 02</div>
+        <div class="item3">Item 03</div>
+        <!--<div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>-->
+    </div>
+
+     <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div>01</div>
+        <div class="texto-grande">02</div>
+        <div>03</div>
+        <!--<div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>-->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+</body>
+</html>
